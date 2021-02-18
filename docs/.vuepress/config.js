@@ -4,12 +4,12 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'DISOFTW',
+  title: 'Servicios Escolares ITM',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
   description: description,
-  base: '/repo/',
+  base: '/docs/',
 
   /**
    * AntDocs theme for AntDesign for vue
@@ -23,7 +23,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#f1502f' }],
+    ['meta', { name: 'theme-color', content: '#800000' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     [
       'meta',
@@ -33,13 +33,13 @@ module.exports = {
       'meta',
       {
         name: 'og:image',
-        content: 'https://www.aaaimx.org/software/logo.png'
+        content: 'https://www.itmerida.mx/imagenes/tec.png'
       }
     ],
     [
       'link',
       {
-        href: 'https://www.aaaimx.org/software/logo.png',
+        href: 'https://www.itmerida.mx/imagenes/tec.png',
         rel: 'shortcut icon'
       }
     ]
@@ -51,26 +51,30 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: 'https://github.com/disoftw',
+    repo: 'https://github.com/Servicios-Escolares-ITM',
     editLinks: false,
-    logo: 'https://www.aaaimx.org/software/logo.png',
+    logo: 'https://www.itmerida.mx/imagenes/tec.png',
     docsDir: '',
     editLinkText: '',
     lastUpdated: true,
     nav: [
       {
-        text: 'Comandos',
-        link: '/intro/'
+        text: 'Ventanilla Digital',
+        link: '/ventanilla/'
       },
       {
-        text: 'Glosario',
-        link: '/glossary/'
+        text: 'Enfermeria',
+        link: '/nursing/'
+      },
+      {
+        text: 'Psicología',
+        link: '/psychology/'
       }
     ],
     sidebar: {
-      '/intro/': [
+      '/ventanilla/': [
         {
-          title: 'Intro',
+          title: 'Ventanilla Digital',
           collapsable: false,
           children: ['']
         }
