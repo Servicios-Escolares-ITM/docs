@@ -77,7 +77,13 @@ module.exports = {
           title: 'Ventanilla Digital',
           collapsable: false,
           children: ['']
+        },
+        {
+          title: 'Titulación',
+          collapsable: false,
+          children: ['titulacion']
         }
+        
       ]
     }
   },
