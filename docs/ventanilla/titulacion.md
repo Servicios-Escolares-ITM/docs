@@ -40,3 +40,4 @@ API para el proceso de titulación en el area de servicios escolares del ITM
   - Solo si el usuario pertenece al grupo `Nursing`
 - **DELETE** /api/medicines/{id} Eliminar usuario
   - Solo si el usuario pertenece al grupo `Nursing`
+# En construccion

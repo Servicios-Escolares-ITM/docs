@@ -74,14 +74,14 @@ module.exports = {
     sidebar: {
       '/ventanilla/': [
         {
-          title: 'Ventanilla Digital',
-          collapsable: false,
-          children: ['']
+          title: 'API',
+          collapsable: true,
+          children: ['', 'tramites', 'titulacion']
         },
         {
-          title: 'Titulación',
-          collapsable: false,
-          children: ['titulacion']
+          title: 'Dashboard',
+          collapsable: true,
+          children: ['frontend']
         }
         
       ]

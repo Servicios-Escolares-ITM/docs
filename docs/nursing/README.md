@@ -6,25 +6,27 @@ API para el manejo de medicamentos y expendientes del área de Enfemeria del ITM
 
 ### Medicamento
 
-| Campo                | Tipo de dato | Descripción            |
-| -------------------- | :----------: | :--------------------- |
-| **id**               |    `uuid`    | Identificador único    |
-| **description**      |   `string`   | Descripción            |
-| **substance**        |   `string`   | Sustancia activa       |
-| **common_name**      |   `string`   | Nombre convencional    |
-| **expiriation_date** |    `date`    | Fecha caducidad        |
-| **unit_price**       |   `float`    | Costo unitario         |
-| **package_price**    |   `float`    | Costo total            |
-| **lote**             |  `integer`   | Lote                   |
-| **stock**            |  `integer`   | Stock                  |
-| **items_per_paq**    |  `integer`   | Cantidad por paquete   |
-| **presentation**     |   `string`   | Presentación           |
-| **dosis**            |   `string`   | Dosis por presentación |
-| **created_at**       |  `datetime`  | Fecha de creación      |
+| Campo               | Tipo de dato | Descripción            |
+| ------------------- | :----------: | ---------------------- |
+| **id**              |    `uuid`    | Identificador único    |
+| **description**     |   `string`   | Descripción            |
+| **substance**       |   `string`   | Sustancia activa       |
+| **common_name**     |   `string`   | Nombre convencional    |
+| **expiration_date** |    `date`    | Fecha caducidad        |
+| **unit_price**      |   `float`    | Costo unitario         |
+| **package_price**   |   `float`    | Costo total            |
+| **lote**            |  `integer`   | Código de Lote         |
+| **stock**           |  `integer`   | Stock                  |
+| **items_per_paq**   |  `integer`   | Cantidad por paquete   |
+| **presentation**    |   `string`   | Presentación           |
+| **dosis**           |   `string`   | Dosis por presentación |
+| **created_at**      |  `datetime`  | Fecha de creación      |
+| **updated_at**      |  `datetime`  | Fecha de actualización |
 
 ## Endpoints
 
 - **GET** /api/medicines/ Listado medicamentos registrados en la base de datos.
+
   - Retornar todos los campos de Medicine.
   - Busqueda por descripcion y sustancia activa.
   - Todos los campos deben poder filtrarse.
@@ -32,6 +34,7 @@ API para el manejo de medicamentos y expendientes del área de Enfemeria del ITM
   - Orden por defecto por fecha de creación (`created_at`)
 
 - **GET** /api/medicines/{id}/ Obtener información de un medicamento
+
   - Debe incluir todos los campos
 
 - **POST** /api/medicines/ Crear un medicamento
