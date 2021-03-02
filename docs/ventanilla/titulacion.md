@@ -4,25 +4,53 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 
 ## Diccionario de datos
 
-### Titulos
+### PlanName
 
 | Campo                | Tipo de dato | Descripción            |
 | -------------------- | :----------: | :--------------------- |
-| **id**               |    `uuid`    | Identificador único    |
-| **description**      |   `string`   | Descripción            |
-| **substance**        |   `string`   | Sustancia activa       |
-| **common_name**      |   `string`   | Nombre convencional    |
-| **expiriation_date** |    `date`    | Fecha caducidad        |
-| **unit_price**       |   `float`    | Costo unitario         |
-| **package_price**    |   `float`    | Costo total            |
-| **lote**             |  `integer`   | Lote                   |
-| **stock**            |  `integer`   | Stock                  |
-| **items_per_paq**    |  `integer`   | Cantidad por paquete   |
-| **presentation**     |   `string`   | Presentación           |
-| **dosis**            |   `string`   | Dosis por presentación |
-| **created_at**       |  `datetime`  | Fecha de creación      |
+| **id**               |    `uuid`    | Identificador único    | 
+| **planTitulation**   |   `string`   | nombre del plan        | 
 
-### Endpoints
+
+
+### PlanData
+
+| Campo                | Tipo de dato | Descripción                  |
+| -------------------- | :----------: | :--------------------------- |
+| **id**               |    `uuid`    | Identificador único          |
+| **actaNacimiento**   |    `docs`    | Acta de nacimiento           |
+| **certBachiller**    |    `docs`    | Certificado de Bachillerato  |
+| **certProfesional**  |    `docs`    | Certificado profesional      |
+| **constSS**          |    `docs`    | Constancia ServicioSocial    |
+| **constIngles**      |    `docs`    | Constancia de ingles         |
+| **opciones**         |    `string`  | Opcion de titulacion  ????   | 
+| **curp**             |    `docs`    | curp                         |
+| **fotografia**       |    `img`     | Foto tam. cred. ovalada      |
+| **hojaNoAdeu**       |    `docs`    | Hoja de no adeudo            |
+| **actoDeRec**        |    `docs`    | Acto de recepcion prof.      |
+| **efirmaSat**        |    `docs`    | tramite de la e-firma        |
+| **created_at**       |  `datetime`  | Fecha de creación            |
+| **updated_at**       |  `datetime`  | Fecha de creación            |
+
+### PlanReturn
+
+| Campo                | Tipo de dato | Descripción                     |
+| -------------------- | :----------: | :------------------------------ |
+| **id**               |    `uuid`    | Identificador único             | 
+| **noInc**            |    `docs`    | const. no inconveniencia        | 
+| **compExamen**       |    `docs`    | comprobante de examen           | 
+| **jurEtica**         |    `docs`    | juramento de etica              | 
+
+### PlanPayments
+
+| Campo                | Tipo de dato | Descripción                     |
+| -------------------- | :----------: | :------------------------------ |
+| **id**               |    `uuid`    | Identificador único             | 
+| **reciboPago**       |    `docs`    | recibo de pago                  | 
+
+
+
+### Endpoints EXAMPLES
 
 - **GET** /api/medicines/ Listado medicamentos registrados en la base de datos.
   - Retornar todos los campos de Medicine.
