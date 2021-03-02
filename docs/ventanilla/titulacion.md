@@ -22,7 +22,7 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | **dosis**            |   `string`   | Dosis por presentación |
 | **created_at**       |  `datetime`  | Fecha de creación      |
 
-## Endpoints
+### Endpoints
 
 - **GET** /api/medicines/ Listado medicamentos registrados en la base de datos.
   - Retornar todos los campos de Medicine.
