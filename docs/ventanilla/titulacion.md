@@ -6,48 +6,65 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 
 ### PlanName
 
-| Campo                | Tipo de dato | Descripción            |
-| -------------------- | :----------: | :--------------------- |
+| Campo                | Tipo de dato | Descripción            | 
+| -------------------- | :----------: | :--------------------- | 
 | **id**               |    `uuid`    | Identificador único    | 
 | **planTitulation**   |   `string`   | nombre del plan        | 
+| **description**      |   `string`   | descripcion del plan   | 
+| **isActive**         |   `boolean`  | si existe el archivo   | 
+| **created_at**       |  `datetime`  | Fecha de creación      | 
+| **updated_at**       |  `datetime`  | Fecha de creación      | 
+
+### Documents
+
+| Campo                | Tipo de dato | Descripción            | 
+| -------------------- | :----------: | :--------------------- | 
+| **id**               |    `uuid`    | Identificador único    | foreign 
+| **idPlan**           |    `uuid`    | Identificador único    | Lista de planes [2004, titulacion, ...] 
+| **name**             |   `string`   | nombre del plan        | [curp] 
+| **isActive**         |   `boolean`  | si existe el archivo   | 
+| **created_at**       |  `datetime`  | Fecha de creación      | 
+| **updated_at**       |  `datetime`  | Fecha de creación      | 
 
 
+### alumDocs
 
-### PlanData
+| Campo                | Tipo de dato | Descripción                       | 
+| -------------------- | :----------: | :---------------------            | 
+| **id**               |    `uuid`    | Identificador único               | 
+| **idPackage**        |   `string`   | nombre del paquete                |  foreign
+| **idDocument**       |   `string`   | id del documento                  |  foreign
+| **file**             |    `uuid`    | Identificador único               | 
+| **isAcepted**        |   `boolean`  | si los archivos estan aceptados   | 
+| **isActive**         |   `boolean`  | si existe el archivo              | 
+| **created_at**       |  `datetime`  | Fecha de creación                 | 
+| **updated_at**       |  `datetime`  | Fecha de creación                 | 
 
-| Campo                | Tipo de dato | Descripción                  |
-| -------------------- | :----------: | :--------------------------- |
-| **id**               |    `uuid`    | Identificador único          |
-| **actaNacimiento**   |    `docs`    | Acta de nacimiento           |
-| **certBachiller**    |    `docs`    | Certificado de Bachillerato  |
-| **certProfesional**  |    `docs`    | Certificado profesional      |
-| **constSS**          |    `docs`    | Constancia ServicioSocial    |
-| **constIngles**      |    `docs`    | Constancia de ingles         |
-| **opciones**         |    `string`  | Opcion de titulacion  ????   | 
-| **curp**             |    `docs`    | curp                         |
-| **fotografia**       |    `img`     | Foto tam. cred. ovalada      |
-| **hojaNoAdeu**       |    `docs`    | Hoja de no adeudo            |
-| **actoDeRec**        |    `docs`    | Acto de recepcion prof.      |
-| **efirmaSat**        |    `docs`    | tramite de la e-firma        |
-| **created_at**       |  `datetime`  | Fecha de creación            |
-| **updated_at**       |  `datetime`  | Fecha de creación            |
+### docPackage
 
-### PlanReturn
+| Campo                | Tipo de dato | Descripción                       | 
+| -------------------- | :----------: | :---------------------            | 
+| **id**               |    `uuid`    | Identificador único               | foreign
+| **idAlumn**          |   `string`   | id del alumno                     | idAlumno foreign
+| **idPlan**           |   `string`   | nombre del plan                   | idPlan foreign
+| **grade**            |   `enum`     | lista de datos                    | es de posgrado o de licenciatura (solo deja elegir un valor de la lista)
+| **isActive**         |   `boolean`  | si existe el paquete              | 
+| **created_at**       |  `datetime`  | Fecha de creación                 | 
+| **updated_at**       |  `datetime`  | Fecha de creación                 | 
 
-| Campo                | Tipo de dato | Descripción                     |
-| -------------------- | :----------: | :------------------------------ |
-| **id**               |    `uuid`    | Identificador único             | 
-| **noInc**            |    `docs`    | const. no inconveniencia        | 
-| **compExamen**       |    `docs`    | comprobante de examen           | 
-| **jurEtica**         |    `docs`    | juramento de etica              | 
+### adminResponse
 
-### PlanPayments
-
-| Campo                | Tipo de dato | Descripción                     |
-| -------------------- | :----------: | :------------------------------ |
-| **id**               |    `uuid`    | Identificador único             | 
-| **reciboPago**       |    `docs`    | recibo de pago                  | 
-
+| Campo                | Tipo de dato | Descripción            | 
+| -------------------- | :----------: | :--------------------- | 
+| **id**               |    `uuid`    | Identificador único    | 
+| **toAlumn**          |   `string`   | nombre del plan        | idAlumno foreign
+| **idDocument**       |   `string`   | nombre del plan        | idCampo foreign
+| **file**             |    `uuid`    | Identificador único    | 
+| **comment**          |   `string`   | Identificador único    | 
+| **isRead**           |   `boolean`  | si ya vio el archivo   | 
+| **isActive**         |   `boolean`  | si existe el archivo   | 
+| **created_at**       |  `datetime`  | Fecha de creación      | 
+| **updated_at**       |  `datetime`  | Fecha de creación      | 
 
 
 ### Endpoints EXAMPLES
@@ -69,3 +86,4 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 - **DELETE** /api/medicines/{id} Eliminar usuario
   - Solo si el usuario pertenece al grupo `Nursing`
 # En construccion
+
