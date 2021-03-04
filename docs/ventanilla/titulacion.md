@@ -9,9 +9,9 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | Campo                | Tipo de dato | Descripción            | 
 | -------------------- | :----------: | :--------------------- | 
 | **id**               |    `uuid`    | Identificador único    | 
-| **planTitulation**   |   `string`   | nombre del plan        | 
+| **plan_titulation**  |   `string`   | nombre del plan        | 
 | **description**      |   `string`   | descripcion del plan   | 
-| **isActive**         |   `boolean`  | si existe el archivo   | 
+| **is_active**        |   `boolean`  | si se encuentra activo | 
 | **created_at**       |  `datetime`  | Fecha de creación      | 
 | **updated_at**       |  `datetime`  | Fecha de creación      | 
 
@@ -20,9 +20,9 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | Campo                | Tipo de dato | Descripción            | 
 | -------------------- | :----------: | :--------------------- | 
 | **id**               |    `uuid`    | Identificador único    | foreign 
-| **idPlan**           |    `uuid`    | Identificador único    | Lista de planes [2004, titulacion, ...] 
-| **name**             |   `string`   | nombre del plan        | [curp] 
-| **isActive**         |   `boolean`  | si existe el archivo   | 
+| **id_plan**          |    `uuid`    | Identificador del plan | Lista de planes [2004, titulacion, ...] 
+| **name**             |   `string`   | nombre del documento   | 
+| **is_active**        |   `boolean`  | si se encuentra activo | 
 | **created_at**       |  `datetime`  | Fecha de creación      | 
 | **updated_at**       |  `datetime`  | Fecha de creación      | 
 
@@ -32,11 +32,11 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | Campo                | Tipo de dato | Descripción                       | 
 | -------------------- | :----------: | :---------------------            | 
 | **id**               |    `uuid`    | Identificador único               | 
-| **idPackage**        |   `string`   | nombre del paquete                |  foreign
-| **idDocument**       |   `string`   | id del documento                  |  foreign
-| **file**             |    `uuid`    | Identificador único               | 
-| **isAcepted**        |   `boolean`  | si los archivos estan aceptados   | 
-| **isActive**         |   `boolean`  | si existe el archivo              | 
+| **id_package**       |   `string`   | nombre del paquete                |  foreign
+| **id_document**      |   `string`   | id del documento                  |  foreign
+| **file**             |    `file`    | archivo del alumno                | 
+| **is_acepted**       |   `boolean`  | si los archivos estan aceptados   | 
+| **is_active**        |   `boolean`  |  si se encuentra activo           | 
 | **created_at**       |  `datetime`  | Fecha de creación                 | 
 | **updated_at**       |  `datetime`  | Fecha de creación                 | 
 
@@ -45,10 +45,10 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | Campo                | Tipo de dato | Descripción                       | 
 | -------------------- | :----------: | :---------------------            | 
 | **id**               |    `uuid`    | Identificador único               | foreign
-| **idAlumn**          |   `string`   | id del alumno                     | idAlumno foreign
-| **idPlan**           |   `string`   | nombre del plan                   | idPlan foreign
+| **id_alumn**         |   `string`   | id del alumno                     | idAlumno foreign
+| **id_plan**          |   `string`   | id del plan                       | idPlan foreign
 | **grade**            |   `enum`     | lista de datos                    | es de posgrado o de licenciatura (solo deja elegir un valor de la lista)
-| **isActive**         |   `boolean`  | si existe el paquete              | 
+| **is_active**        |   `boolean`  |  si se encuentra activo           | 
 | **created_at**       |  `datetime`  | Fecha de creación                 | 
 | **updated_at**       |  `datetime`  | Fecha de creación                 | 
 
@@ -57,12 +57,12 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | Campo                | Tipo de dato | Descripción            | 
 | -------------------- | :----------: | :--------------------- | 
 | **id**               |    `uuid`    | Identificador único    | 
-| **toAlumn**          |   `string`   | nombre del plan        | idAlumno foreign
-| **idDocument**       |   `string`   | nombre del plan        | idCampo foreign
-| **file**             |    `uuid`    | Identificador único    | 
+| **id_alumn**         |    `uuid`    | id alumno que recibe   | idAlumno foreign
+| **id_document**      |   `string`   | id del doc             | idCampo foreign
+| **file**             |    `file`    | Identificador único    | 
 | **comment**          |   `string`   | Identificador único    | 
-| **isRead**           |   `boolean`  | si ya vio el archivo   | 
-| **isActive**         |   `boolean`  | si existe el archivo   | 
+| **is_read**          |   `boolean`  | si ya vio el archivo   | 
+| **is_active**        |   `boolean`  | si se encuentra activo |
 | **created_at**       |  `datetime`  | Fecha de creación      | 
 | **updated_at**       |  `datetime`  | Fecha de creación      | 
 
