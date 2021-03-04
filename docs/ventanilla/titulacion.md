@@ -35,22 +35,22 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | **created_at**       |  `datetime`  | Fecha de creación      | 
 | **updated_at**       |  `datetime`  | Fecha de creación      | 
 
-
-### alumDoc
+### studentDoc
 
 | Campo                | Tipo de dato | Descripción                       | 
 | -------------------- | :----------: | :---------------------            | 
 | **id**               |    `uuid`    | Identificador único               | 
-| **id_package**       |   `string`   | nombre del paquete                |  foreign
-| **id_document**      |   `string`   | id del documento                  |  foreign
-| **id_alumn**         |   `string`   | id del alumno                     | idAlumno foreign
+| **id_document**      |   `string`   | id del documento                  |  foreign |quitar|
+| **id_alumn**         |   `string`   | id del alumno                     |  idAlumno foreign
 | **file**             |    `file`    | archivo del alumno                | 
-| **is_acepted**       |   `boolean`  | si los archivos estan aceptados   | 
+| **is_valid**         |   `boolean`  | si los archivos estan aceptados   | 
+| **has_error**        |   `boolean`  | si el documento tiene errores     | 
+| **comment**          |   `string`   | comentario para los errores       | 
 | **is_active**        |   `boolean`  |  si se encuentra activo           | 
 | **created_at**       |  `datetime`  | Fecha de creación                 | 
 | **updated_at**       |  `datetime`  | Fecha de creación                 | 
 
-### docPackage
+### planPackage
 
 | Campo                | Tipo de dato | Descripción                       | 
 | -------------------- | :----------: | :---------------------            | 
@@ -61,7 +61,7 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | **created_at**       |  `datetime`  | Fecha de creación                 | 
 | **updated_at**       |  `datetime`  | Fecha de creación                 | 
 
-### adminResponse
+### adminDoc
 
 | Campo                | Tipo de dato | Descripción            | 
 | -------------------- | :----------: | :--------------------- | 
