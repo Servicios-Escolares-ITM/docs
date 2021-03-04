@@ -83,6 +83,13 @@ module.exports = {
           collapsable: true,
           children: ['frontend']
         }
+      ],
+      '/nursing/': [
+        {
+          title: 'Módulo de Enfermería',
+          collapsable: true,
+          children: ['']
+        }
       ]
     }
   },
