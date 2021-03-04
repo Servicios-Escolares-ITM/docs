@@ -4,7 +4,17 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 
 ## Diccionario de datos
 
-### PlanName
+### Titulation
+
+| Campo                 | Tipo de dato | Descripción            | 
+| --------------------- | :----------: | :--------------------- | 
+| **id**                |    `uuid`    | Identificador único    | 
+| **option_titulation** |   `string`   | opcion de titulacion   | 
+| **status**            |   `string`   | descripcion del plan   | 
+| **created_at**        |  `datetime`  | Fecha de creación      | 
+| **updated_at**        |  `datetime`  | Fecha de creación      | 
+
+### Plan
 
 | Campo                | Tipo de dato | Descripción            | 
 | -------------------- | :----------: | :--------------------- | 
@@ -15,25 +25,25 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | **created_at**       |  `datetime`  | Fecha de creación      | 
 | **updated_at**       |  `datetime`  | Fecha de creación      | 
 
-### Documents
+### Document
 
 | Campo                | Tipo de dato | Descripción            | 
 | -------------------- | :----------: | :--------------------- | 
 | **id**               |    `uuid`    | Identificador único    | foreign 
-| **id_plan**          |    `uuid`    | Identificador del plan | Lista de planes [2004, titulacion, ...] 
 | **name**             |   `string`   | nombre del documento   | 
 | **is_active**        |   `boolean`  | si se encuentra activo | 
 | **created_at**       |  `datetime`  | Fecha de creación      | 
 | **updated_at**       |  `datetime`  | Fecha de creación      | 
 
 
-### alumDocs
+### alumDoc
 
 | Campo                | Tipo de dato | Descripción                       | 
 | -------------------- | :----------: | :---------------------            | 
 | **id**               |    `uuid`    | Identificador único               | 
 | **id_package**       |   `string`   | nombre del paquete                |  foreign
 | **id_document**      |   `string`   | id del documento                  |  foreign
+| **id_alumn**         |   `string`   | id del alumno                     | idAlumno foreign
 | **file**             |    `file`    | archivo del alumno                | 
 | **is_acepted**       |   `boolean`  | si los archivos estan aceptados   | 
 | **is_active**        |   `boolean`  |  si se encuentra activo           | 
@@ -45,7 +55,6 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | Campo                | Tipo de dato | Descripción                       | 
 | -------------------- | :----------: | :---------------------            | 
 | **id**               |    `uuid`    | Identificador único               | foreign
-| **id_alumn**         |   `string`   | id del alumno                     | idAlumno foreign
 | **id_plan**          |   `string`   | id del plan                       | idPlan foreign
 | **grade**            |   `enum`     | lista de datos                    | es de posgrado o de licenciatura (solo deja elegir un valor de la lista)
 | **is_active**        |   `boolean`  |  si se encuentra activo           | 
@@ -87,3 +96,13 @@ API para el proceso de titulación en el area de servicios escolares del ITM
   - Solo si el usuario pertenece al grupo `Nursing`
 # En construccion
 
+ya existe
+
+tabla de alumno
+
+id
+nombre
+matricula
+admision
+speciality
+carrera
