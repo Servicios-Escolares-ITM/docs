@@ -67,7 +67,7 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | -------------------- | :----------: | :--------------------- | 
 | **id**               |    `uuid`    | Identificador único    | 
 | **id_alumn**         |    `uuid`    | id alumno que recibe   | idAlumno foreign
-| **id_document**      |   `string`   | id del doc             | idCampo foreign
+| **id_request**       |    `uuid`    | id del tramite         | idCampo foreign
 | **file**             |    `file`    | Identificador único    | 
 | **comment**          |   `string`   | Identificador único    | 
 | **is_read**          |   `boolean`  | si ya vio el archivo   | 
