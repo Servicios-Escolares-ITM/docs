@@ -56,8 +56,8 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | -------------------- | :----------: | :---------------------            | 
 | **id**               |    `uuid`    | Identificador único               | foreign
 | **id_plan**          |   `string`   | id del plan                       | idPlan foreign
-| **grade**            |   `enum`     | lista de datos                    | es de posgrado o de licenciatura (solo deja elegir un valor de la lista)
-| **is_active**        |   `boolean`  |  si se encuentra activo           | 
+| **grade**            |   `string`   | posgrado o licenciatura           | es de posgrado o de licenciatura (solo deja elegir un valor de la lista)
+| **is_active**        |   `boolean`  | si se encuentra activo            | 
 | **created_at**       |  `datetime`  | Fecha de creación                 | 
 | **updated_at**       |  `datetime`  | Fecha de creación                 | 
 
