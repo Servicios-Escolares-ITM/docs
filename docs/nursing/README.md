@@ -59,33 +59,30 @@ Este modulo utiliza el modelo de Usuario y Alumno definidos globales pero se hac
 | **first_name**     |   `string`   | Nombre                  |
 | **last_name**      |   `string`   | Apellidos               |
 | **gender**         |   `string`   | Sexo: ['M', 'F', 'NE' ] |
-| **birthday**       |  `datetime`  | Fecha de nacimiento     |
-| **age**            |  `integer`   | Edad en meses           |
+| **CURP**           |   `string`   | CURP                    |
+| **NSS**            |   `string`   | Número seguro social    |
 | **address**        |   `string`   | Dirección               |
-| **phone**          |  `integer`   | Telefono de contacto    |
 | **marital_status** |   `string`   | Estado civil ['C', 'S'] |
+| **age**            |  `integer`   | Edad en meses           |
+| **phone**          |  `integer`   | Telefono de contacto    |
+| **birthday**       |  `datetime`  | Fecha de nacimiento     |
 
 ### Estudiante
 
 | Campo          | Tipo de dato | Descripción            |
 | -------------- | :----------: | :--------------------- |
 | **id**         |    `uuid`    | Identificador único    |
+| **user**       |    `uuid`    | Usuario del estudiante |
 | **enrollment** |   `string`   | Matrícula              |
-| **admission**  |  `integer`   | Ingreso                |
-| **CURP**       |   `string`   | CURP                   |
-| **NSS**        |   `string`   | Número seguro social   |
 | **career**     |   `string`   | Carrera                |
-| **user**       |     `id`     | Usuario del estudiante |
+| **admission**  |  `integer`   | Ingreso                |
 
 #### Ficha Médica
 
 | Campo                   | Tipo de dato | Descripción                                        |
 | ----------------------- | :----------: | :------------------------------------------------- |
 | **id**                  |    `uuid`    | Identificador único                                |
-| **ocupation**           |   `string`   | Actividad preponderante                            |
-| **affiliation**         |   `string`   | AFILIACIÓN AL SISTEMA DE SALUD (IMSS, ISSSTE, ETC) |
-| **cedula**              |   `string`   | CEDULA DE AFILIACIÓN                               |
-| **blood_type**          |   `string`   | TIPO SANGUÍNEO                                     |
+| **user**                |    `uuid`    | Usuario (VD) asociado al registro                  |
 | **weight**              |   `float`    | Peso en Kg                                         |
 | **height**              |   `float`    | Altura o tall en mts o cm                          |
 | **abdominal_perimeter** |   `float`    | Perímetro abdominal                                |
@@ -93,9 +90,12 @@ Este modulo utiliza el modelo de Usuario y Alumno definidos globales pero se hac
 | **blood_pressure**      |   `float`    | Presion arterial                                   |
 | **heart_rate**          |   `float`    | Frecuencia cardiaca (FC)                           |
 | **breath_freq**         |   `float`    | Frecuencia respiratoria (FR)                       |
-| **user**                |    `uuid`    | Usuario (VD) asociado al registro                  |
 | **personal_history**    |    `JSON`    | ANTECEDENTES PERSONALES                            |
 | **family_history**      |    `JSON`    | ANTECEDENTES FAMILIARES                            |
+| **ocupation**           |   `string`   | Actividad preponderante                            |
+| **affiliation**         |   `string`   | AFILIACIÓN AL SISTEMA DE SALUD (IMSS, ISSSTE, ETC) |
+| **cedula**              |   `string`   | CEDULA DE AFILIACIÓN                               |
+| **blood_type**          |   `string`   | TIPO SANGUÍNEO                                     |
 | **observations**        |   `string`   | Observaciones adicionales                          |
 | **created_at**          |  `datetime`  | Fecha de creación                                  |
 | **updated_at**          |  `datetime`  | Fecha de actualización                             |
