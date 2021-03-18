@@ -56,10 +56,27 @@ Authorization: 'Bearer {token}'
 ```
 :::
 
+```
+GET /tags?limit=20&offset=0
+Authorization: 'Bearer {token}'
+```
+::: details Queries disponibles
+```
+?limit=20                           # 20 es el valor por defecto
+?offset=0                           # 0 es el valor por defecto                      
+?orderBy= name | id                 # [id, ASC] es el valor por defecto
+?name={value}                       # Opcional
+```
+:::
 #### Obtener uno
 
 ```
 GET /notifications/{uuid}
+Authorization: 'Bearer {token}'
+```
+
+```
+GET /tags/{uuid}
 Authorization: 'Bearer {token}'
 ```
 
@@ -75,6 +92,16 @@ Content-Type: application/json
     "message": "Message",
     "subject": "Subject",
     "date": "date"
+}
+```
+
+```
+POST /tags
+Authorization: 'Bearer {token}'
+Content-Type: application/json
+
+{
+    "name": "name"
 }
 ```
 
@@ -97,9 +124,24 @@ Content-Type: application/json
 Todos los campos son opcionales, pero es requerido al menos uno
 :::
 
+```
+PUT /tags/{uuid}
+Authorization: 'Bearer {token}'
+Content-Type: application/json
+
+{
+    "name": "Name"
+}
+```
+
 ### DELETE
 
 ```
 DELETE /notifications/{uuid}
+Authorization: 'Bearer {token}'
+```
+
+```
+DELETE /tags/{uuid}
 Authorization: 'Bearer {token}'
 ```
