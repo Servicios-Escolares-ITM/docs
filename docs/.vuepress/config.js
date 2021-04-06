@@ -76,7 +76,7 @@ module.exports = {
         {
           title: 'API',
           collapsable: true,
-          children: ['', 'tramites', 'titulacion']
+          children: ['', 'tramites', 'titulacion', 'bulk-data']
         },
         {
           title: 'Dashboard',
