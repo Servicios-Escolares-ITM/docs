@@ -76,14 +76,20 @@ module.exports = {
         {
           title: 'API',
           collapsable: true,
-          children: ['', 'tramites', 'titulacion']
+          children: ['', 'tramites', 'titulacion', 'bulk-data']
         },
         {
           title: 'Dashboard',
           collapsable: true,
           children: ['frontend']
         }
-        
+      ],
+      '/nursing/': [
+        {
+          title: 'Módulo de Enfermería',
+          collapsable: true,
+          children: ['']
+        }
       ]
     }
   },
