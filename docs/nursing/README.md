@@ -86,7 +86,7 @@ Este modulo utiliza el modelo de Usuario y Alumno definidos globales pero se hac
 | **weight**              |   `float`    | Peso en Kg                                         |
 | **height**              |   `float`    | Altura o tall en mts o cm                          |
 | **abdominal_perimeter** |   `float`    | Perímetro abdominal                                |
-| **BMI**                 |   `float`    | Indice de Masa Corporal (IMC)                      |
+| **BMI**                 |   `float`    | Indice de Masa Corporal ([IMC](https://es.wikipedia.org/wiki/C3%8Dndice_de_masa_corporal))                     |
 | **blood_pressure**      |   `float`    | Presion arterial                                   |
 | **heart_rate**          |   `float`    | Frecuencia cardiaca (FC)                           |
 | **breath_freq**         |   `float`    | Frecuencia respiratoria (FR)                       |
