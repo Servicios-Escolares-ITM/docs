@@ -69,26 +69,52 @@ module.exports = {
       {
         text: 'Psicología',
         link: '/psychology/'
+      },
+      {
+        text: 'Misceláneos',
+        link: '/misc/'
       }
     ],
     sidebar: {
       '/ventanilla/': [
         {
-          title: 'API',
+          title: 'Manual de Uso',
           collapsable: true,
-          children: ['', 'tramites', 'titulacion', 'bulk-data']
+          children: []
         },
         {
-          title: 'Dashboard',
+          title: 'Backend API',
+          collapsable: true,
+          children: ['', 'tramites', 'titulacion']
+        },
+        {
+          title: 'FrontEnd',
           collapsable: true,
           children: ['frontend']
         }
       ],
       '/nursing/': [
         {
-          title: 'Módulo de Enfermería',
+          title: 'Manual de Uso',
+          collapsable: true,
+          children: []
+        },
+        {
+          title: 'BackEnd API',
           collapsable: true,
           children: ['']
+        }
+      ],
+      '/misc/': [
+        {
+          title: 'Cruce de CSV',
+          collapsable: true,
+          children: ['', 'csv']
+        },
+        {
+          title: 'Datos masivos',
+          collapsable: true,
+          children: ['bulk-data']
         }
       ]
     }

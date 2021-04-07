@@ -35,7 +35,6 @@ API para el proceso de titulación en el area de servicios escolares del ITM
   - Todos los campos deben poder ordenarse.
   - Orden por defecto por fecha de creación (`created_at`).
 
-
 - **GET** /api/activeoptions/ Listado opciones ligadas a un plan.
   - esta url es la tabla que enlaza las opciones de titulación con los planes titulación.
   - Retornar todos los campos correspondiente a las opciones activas.
