@@ -75,25 +75,6 @@ API para el proceso de titulación en el area de servicios escolares del ITM
 | **created_at**       |  `datetime`  | Fecha de creación      | 
 | **updated_at**       |  `datetime`  | Fecha de creación      | 
 
-
-### Endpoints EXAMPLES
-
-- **GET** /api/medicines/ Listado medicamentos registrados en la base de datos.
-  - Retornar todos los campos de Medicine.
-  - Busqueda por descripcion y sustancia activa.
-  - Todos los campos deben poder filtrarse.
-  - Todos los campos deben poder ordenarse
-  - Orden por defecto por fecha de creación (`created_at`)
-
-- **GET** /api/medicines/{id}/ Obtener información de un medicamento
-  - Debe incluir todos los campos
-
-- **POST** /api/medicines/ Crear un medicamento
-  - Solo si el usuario pertenece al grupo `Nursing`
-- **PATCH** /api/medicines/{id} Actualizar información un medicamento
-  - Solo si el usuario pertenece al grupo `Nursing`
-- **DELETE** /api/medicines/{id} Eliminar usuario
-  - Solo si el usuario pertenece al grupo `Nursing`
 # En construccion
 
 ya existe

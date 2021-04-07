@@ -2,14 +2,22 @@
 
 API para el manejo de usuarios, roles y permisos
 
-## Diccionario de datos
+## Grupo
 
-### Grupo
+### Diccionario de datos
 
-| Campo    | Tipo de dato | Descripción                                                  |
-| -------- | :----------: | :----------------------------------------------------------- |
-| **id**   |  `integer`   | `Alumno | Enfermeria | Ventanilla | Psicologia | Titulacion` |
-| **name** |   `string`   | Descripción                                                  |
+| Campo          | Tipo de dato | Descripción                                                                      |
+| -------------- | :----------: | :------------------------------------------------------------------------------- |
+| **id**         |  `integer`   | Identificador numerico del grupo                                                 |
+| **name**       |   `string`   | `student` , `nursing` , `digital-window` ...                                     |
+| **permission** |   `array`    | Lista de acciones que tiene acceso el grupo i.e. `view_student`,`change_student` |
+
+- `student`:
+- `nursing`:
+- `digital-window`:
+- `psychology`:
+- `titulation`:
+- `merge-csv`:
 
 ## Endpoints
 
