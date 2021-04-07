@@ -29,7 +29,7 @@ API para el proceso de titulación en el area de servicios escolares del ITM
   - Orden por defecto por fecha de creación (`created_at`).
 
 
-- **GET** /api/op-titulations/ Listado de opciones de titulación registradas en la base de datos.
+- **GET** /api/titulation/options Listado de opciones de titulación registradas en la base de datos.
   - Retornar todos los campos correspondiente a las opciones de titulación.
   - Todos los campos deben poder filtrarse.
   - Todos los campos deben poder ordenarse.
